@@ -1,0 +1,127 @@
+{
+
+"booking": [
+    {
+        "key": "BookingID",
+        "type": "keyid",
+        "UIComponentTitle": "Booking"
+    }
+        ,{
+        "key": "DateOfBooking",
+        "label": "DateOfBooking",
+        "type": "date",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "FromDate",
+        "label": "FromDate",
+        "type": "date",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "ToDate",
+        "label": "ToDate",
+        "type": "date",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "BikeAvailability",
+        "label": "BikeAvailability",
+        "type": "check",
+        "editable": true,
+        "validators": [
+             "isTruthy"
+        ]
+                            }
+    ,{
+        "key": "TokenAmount",
+        "label": "TokenAmount",
+        "type": "text",
+        "editable": true,
+        "validators": [
+             "isNumber"
+, "isPositive"
+        ]
+                            }
+    ,{
+        "key": "Amtpaidmode",
+        "label": "Amtpaidmode",
+        "type": "check",
+        "editable": true,
+        "validators": [
+             "isTruthy"
+        ]
+                            }
+    ,{
+        "key": "BookingBike",
+        "label": "Bike",
+        "type": "dropdown",
+        "valueId": "BikeID",
+        "nameId": "BikeID",
+        "contentId": "BikeID",
+        "source": "Bike",
+        "create": true,
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "BookingBike",
+        "label": "Bike",
+        "type": "dropdown",
+        "valueId": "BikeID",
+        "nameId": "Manufacturer",
+        "contentId": "Manufacturer",
+        "source": "Bike",
+        "create": true,
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "BookingBike",
+        "label": "Bike",
+        "type": "dropdown",
+        "valueId": "BikeID",
+        "nameId": "Model",
+        "contentId": "Model",
+        "source": "Bike",
+        "create": true,
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "BookingBike",
+        "label": "Bike",
+        "type": "dropdown",
+        "valueId": "BikeID",
+        "nameId": "YearOfRegistration",
+        "contentId": "YearOfRegistration",
+        "source": "Bike",
+        "create": true,
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "BookingBike",
+        "label": "Bike",
+        "type": "dropdown",
+        "valueId": "BikeID",
+        "nameId": "Color",
+        "contentId": "Color",
+        "source": "Bike",
+        "create": true,
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+]
+}

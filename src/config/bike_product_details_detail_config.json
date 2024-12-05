@@ -1,0 +1,42 @@
+{
+
+"bike": [
+    {
+        "key": "BikeID",
+        "type": "keyid",
+        "UIComponentTitle": "Bike"
+    }
+        ,{
+        "key": "Manufacturer",
+        "label": "Manufacturer",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "Model",
+        "label": "Model",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "YearOfRegistration",
+        "label": "YearOfRegistration",
+        "type": "date",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "Color",
+        "label": "Color",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+]
+}

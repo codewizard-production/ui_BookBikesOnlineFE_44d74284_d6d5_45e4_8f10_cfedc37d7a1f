@@ -1,0 +1,949 @@
+{
+        "verfication": [
+                        {
+                            "key": "VerificationID",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "IDType",
+                            "label": "IDType",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Model.IDTypes",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "IDType is required"
+                            ]
+                        },
+                        {
+                            "key": "LicenseNumber",
+                            "label": "LicenseNumber",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int64",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "LicenseNumber is required"
+                            ]
+                        },
+                                                {
+                            "key": "DeliveryFrom",
+                            "label": "DeliveryFrom",
+                            "type": "check",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "DeliveryFrom is required"
+                            ]
+                        },
+                                                {
+                            "key": "IsVerificationDone",
+                            "label": "IsVerificationDone",
+                            "type": "check",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "IsVerificationDone is required"
+                            ]
+                        },
+                        {
+                            "key": "DateOfVerification",
+                            "label": "DateOfVerification",
+                            "type": "date",
+                                "editable": true,
+                                "validators": [
+                                    "required"
+                                ],
+                                "validationMessages": [
+                                    "DateOfVerification is required"
+                                ]
+                            }
+        ]
+,        "payment": [
+                        {
+                            "key": "PaymentID",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "BookingID",
+                            "label": "BookingID",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int32",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "BookingID is required"
+                            ]
+                        },
+                        {
+                            "key": "CustomerName",
+                            "label": "CustomerName",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "CustomerName is required"
+                            ]
+                        },
+                        {
+                            "key": "CustomerPhno",
+                            "label": "CustomerPhno",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int64",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "CustomerPhno is required"
+                            ]
+                        },
+                                                {
+                            "key": "PaymentMode",
+                            "label": "PaymentMode",
+                            "type": "check",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "PaymentMode is required"
+                            ]
+                        },
+                                                {
+                            "key": "PaymentStatus",
+                            "label": "PaymentStatus",
+                            "type": "check",
+                                "editable": true,
+                                "validators": [
+                                    "required"
+                                ],
+                                "validationMessages": [
+                                    "PaymentStatus is required"
+                                ]
+                            }
+        ]
+,        "customer": [
+                        {
+                            "key": "CustomerID",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "CustomerName",
+                            "label": "CustomerName",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "CustomerName is required"
+                            ]
+                        },
+                        {
+                            "key": "CustomerPhoneNumber",
+                            "label": "CustomerPhoneNumber",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int64",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "CustomerPhoneNumber is required"
+                            ]
+                        },
+                        {
+                            "key": "CusrtomerAddress",
+                            "label": "CusrtomerAddress",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "CusrtomerAddress is required"
+                            ]
+                        },
+                    {
+                        "key": "CustomerBookings",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "CustomerReturns",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "CustomerExtendRental",
+                        "type": "keyid"
+                    }  
+                        ]
+,        "insurance": [
+                        {
+                            "key": "InsuranceCompany",
+                            "label": "InsuranceCompany",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "InsuranceCompany is required"
+                            ]
+                        },
+                                                {
+                            "key": "InsurancePolicy",
+                            "label": "InsurancePolicy",
+                            "type": "check",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "InsurancePolicy is required"
+                            ]
+                        },
+                        {
+                            "key": "BikeModel",
+                            "label": "BikeModel",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "BikeModel is required"
+                            ]
+                        },
+                        {
+                            "key": "DateOfBooking",
+                            "label": "DateOfBooking",
+                            "type": "date",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "DateOfBooking is required"
+                            ]
+                        },
+                        {
+                            "key": "Manufacturer",
+                            "label": "Manufacturer",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Manufacturer is required"
+                            ]
+                        },
+                        {
+                            "key": "CustomerID",
+                            "label": "CustomerID",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int32",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "CustomerID is required"
+                            ]
+                        },
+                        {
+                            "key": "InsuranceID",
+                            "type": "keyid"
+                        } 
+        ]
+,        "servicecrew": [
+                        {
+                            "key": "ServiceID",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "ServiceguyName",
+                            "label": "ServiceguyName",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "ServiceguyName is required"
+                            ]
+                        },
+                        {
+                            "key": "CustomerID",
+                            "label": "CustomerID",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int32",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "CustomerID is required"
+                            ]
+                        },
+                        {
+                            "key": "BikeID",
+                            "label": "BikeID",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int32",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "BikeID is required"
+                            ]
+                        },
+                        {
+                            "key": "CurrentBikeAddress",
+                            "label": "CurrentBikeAddress",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "CurrentBikeAddress is required"
+                            ]
+                        },
+                                                {
+                            "key": "ProblemIdentified",
+                            "label": "ProblemIdentified",
+                            "type": "check",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "ProblemIdentified is required"
+                            ]
+                        },
+                                                {
+                            "key": "SolutionProvided",
+                            "label": "SolutionProvided",
+                            "type": "check",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "SolutionProvided is required"
+                            ]
+                        },
+                                                {
+                            "key": "ReturntoManufacturer",
+                            "label": "ReturntoManufacturer",
+                            "type": "check",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "ReturntoManufacturer is required"
+                            ]
+                        },
+                                                {
+                            "key": "InsuranceCovered",
+                            "label": "InsuranceCovered",
+                            "type": "check",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "InsuranceCovered is required"
+                            ]
+                        },
+                                                {
+                            "key": "Issueby",
+                            "label": "Issueby",
+                            "type": "check",
+                                "editable": true,
+                                "validators": [
+                                    "required"
+                                ],
+                                "validationMessages": [
+                                    "Issueby is required"
+                                ]
+                            }
+        ]
+,        "returnrentedbike": [
+                        {
+                            "key": "BookingID",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "DateOfBooking",
+                            "label": "DateOfBooking",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int32",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "DateOfBooking is required"
+                            ]
+                        },
+                        {
+                            "key": "FromDate",
+                            "label": "FromDate",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int32",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "FromDate is required"
+                            ]
+                        },
+                        {
+                            "key": "ToDate",
+                            "label": "ToDate",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int32",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "ToDate is required"
+                            ]
+                        },
+                    {
+                        "key": "ReturnRentedBikeInspection",
+                        "type": "keyid"
+                    }  
+                        ]
+,        "booking": [
+                        {
+                            "key": "BookingID",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "DateOfBooking",
+                            "label": "DateOfBooking",
+                            "type": "date",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "DateOfBooking is required"
+                            ]
+                        },
+                        {
+                            "key": "FromDate",
+                            "label": "FromDate",
+                            "type": "date",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "FromDate is required"
+                            ]
+                        },
+                        {
+                            "key": "ToDate",
+                            "label": "ToDate",
+                            "type": "date",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "ToDate is required"
+                            ]
+                        },
+                                                {
+                            "key": "BikeAvailability",
+                            "label": "BikeAvailability",
+                            "type": "check",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "BikeAvailability is required"
+                            ]
+                        },
+                        {
+                            "key": "TokenAmount",
+                            "label": "TokenAmount",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int32",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "TokenAmount is required"
+                            ]
+                        },
+                                                {
+                            "key": "Amtpaidmode",
+                            "label": "Amtpaidmode",
+                            "type": "check",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Amtpaidmode is required"
+                            ]
+                        },
+                    {
+                        "key": "BookingBike",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "BookingVerfication",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "BookingPayment",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "BookingAssitance",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "BookingInsurance",
+                        "type": "keyid"
+                    }  
+                        ]
+,        "roadsideassistance": [
+                        {
+                            "key": "CustomerID",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "BookingID",
+                            "label": "BookingID",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int32",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "BookingID is required"
+                            ]
+                        },
+                        {
+                            "key": "BikeID",
+                            "label": "BikeID",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int32",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "BikeID is required"
+                            ]
+                        },
+                        {
+                            "key": "Manufacturer",
+                            "label": "Manufacturer",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Manufacturer is required"
+                            ]
+                        },
+                        {
+                            "key": "BikeModel",
+                            "label": "BikeModel",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "BikeModel is required"
+                            ]
+                        },
+                                                {
+                            "key": "ProblemwithBike",
+                            "label": "ProblemwithBike",
+                            "type": "check",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "ProblemwithBike is required"
+                            ]
+                        },
+                        {
+                            "key": "Address",
+                            "label": "Address",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Address is required"
+                            ]
+                        },
+                    {
+                        "key": "RoadsideAssistanceService",
+                        "type": "keyid"
+                    }  
+                        ]
+,        "extendbooking": [
+                        {
+                            "key": "BookingID",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "DateOfBooking",
+                            "label": "DateOfBooking",
+                            "type": "date",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "DateOfBooking is required"
+                            ]
+                        },
+                        {
+                            "key": "FromDate",
+                            "label": "FromDate",
+                            "type": "date",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "FromDate is required"
+                            ]
+                        },
+                        {
+                            "key": "ToDate",
+                            "label": "ToDate",
+                            "type": "date",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "ToDate is required"
+                            ]
+                        },
+                        {
+                            "key": "NewToDate",
+                            "label": "NewToDate",
+                            "type": "date",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "NewToDate is required"
+                            ]
+                        },
+                    {
+                        "key": "ExtendBookingExtendbookingPayment",
+                        "type": "keyid"
+                    }  
+                        ]
+,        "rentalcompany": [
+                        {
+                            "key": "CompanyID",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "CompanyName",
+                            "label": "CompanyName",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "CompanyName is required"
+                            ]
+                        },
+                        {
+                            "key": "CompanyRegistrationNo",
+                            "label": "CompanyRegistrationNo",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "CompanyRegistrationNo is required"
+                            ]
+                        },
+                    {
+                        "key": "RentalCompanyBikes",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "RentalCompanyCustomers",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "RentalCompanyBookings",
+                        "type": "keyid"
+                    }  
+                        ]
+,        "returnbikeinspection": [
+                        {
+                            "key": "BikeID",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "Manufacturer",
+                            "label": "Manufacturer",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Manufacturer is required"
+                            ]
+                        },
+                        {
+                            "key": "Model",
+                            "label": "Model",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Model is required"
+                            ]
+                        },
+                        {
+                            "key": "YearOfRegistration",
+                            "label": "YearOfRegistration",
+                            "type": "date",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "YearOfRegistration is required"
+                            ]
+                        },
+                        {
+                            "key": "PickupFrom",
+                            "label": "PickupFrom",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "PickupFrom is required"
+                            ]
+                        },
+                        {
+                            "key": "DateOfVerification",
+                            "label": "DateOfVerification",
+                            "type": "date",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "DateOfVerification is required"
+                            ]
+                        },
+                                                {
+                            "key": "AnyDamage",
+                            "label": "AnyDamage",
+                            "type": "check",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "AnyDamage is required"
+                            ]
+                        },
+                        {
+                            "key": "CostofDamage",
+                            "label": "CostofDamage",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int32",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "CostofDamage is required"
+                            ]
+                        },
+                                                {
+                            "key": "DamagePaymentReceived",
+                            "label": "DamagePaymentReceived",
+                            "type": "check",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "DamagePaymentReceived is required"
+                            ]
+                        },
+                                                {
+                            "key": "DamageType",
+                            "label": "DamageType",
+                            "type": "check",
+                                "editable": true,
+                                "validators": [
+                                    "required"
+                                ],
+                                "validationMessages": [
+                                    "DamageType is required"
+                                ]
+                            }
+        ]
+,        "bike": [
+                        {
+                            "key": "BikeID",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "Manufacturer",
+                            "label": "Manufacturer",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Manufacturer is required"
+                            ]
+                        },
+                        {
+                            "key": "Model",
+                            "label": "Model",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Model is required"
+                            ]
+                        },
+                        {
+                            "key": "YearOfRegistration",
+                            "label": "YearOfRegistration",
+                            "type": "date",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "YearOfRegistration is required"
+                            ]
+                        },
+                        {
+                            "key": "Color",
+                            "label": "Color",
+                            "type": "text",
+                                "editable": true,
+                                "validators": [
+                                    "required"
+                                ],
+                                "validationMessages": [
+                                    "Color is required"
+                                ]
+                            }
+        ]
+}

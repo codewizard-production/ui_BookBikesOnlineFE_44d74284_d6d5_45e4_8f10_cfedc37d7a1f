@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="Model">
+            <EntityType HasStream="false" Name="RoadsideAssistance">
+                <Key>
+                    <PropertyRef Name="CustomerID"/>
+                </Key>
+                <Property Name="CustomerID" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="BookingID" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="BikeID" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="Manufacturer" Type="Edm.String" isUnique="false"/>
+                <Property Name="BikeModel" Type="Edm.String" isUnique="false"/>
+                <Property Name="ProblemwithBike" Type="Edm.Boolean" isUnique="false"/>
+                <Property Name="Address" Type="Edm.String" isUnique="false"/>
+                <NavigationProperty Name="Service" Type="Model.ServiceCrew"/>
+            </EntityType>
+            <EntityType HasStream="false" Name="Verfication">
+                <Key>
+                    <PropertyRef Name="VerificationID"/>
+                </Key>
+                <Property Name="VerificationID" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="IDType" Type="Model.IDTypes" isUnique="false"/>
+                <Property Name="LicenseNumber" Type="Edm.Int64" isUnique="false"/>
+                <Property Name="DeliveryFrom" Type="Edm.Boolean" isUnique="false"/>
+                <Property Name="IsVerificationDone" Type="Edm.Boolean" isUnique="false"/>
+                <Property Name="DateOfVerification" Type="Edm.Date" isUnique="false"/>
+            </EntityType>
+            <EntityType HasStream="false" Name="Payment">
+                <Key>
+                    <PropertyRef Name="PaymentID"/>
+                </Key>
+                <Property Name="PaymentID" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="BookingID" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="CustomerName" Type="Edm.String" isUnique="false"/>
+                <Property Name="CustomerPhno" Type="Edm.Int64" isUnique="false"/>
+                <Property Name="PaymentMode" Type="Edm.Boolean" isUnique="false"/>
+                <Property Name="PaymentStatus" Type="Edm.Boolean" isUnique="false"/>
+            </EntityType>
+            <EntityType HasStream="false" Name="ServiceCrew">
+                <Key>
+                    <PropertyRef Name="ServiceID"/>
+                </Key>
+                <Property Name="ServiceID" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="ServiceguyName" Type="Edm.String" isUnique="false"/>
+                <Property Name="CustomerID" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="BikeID" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="CurrentBikeAddress" Type="Edm.String" isUnique="false"/>
+                <Property Name="ProblemIdentified" Type="Edm.Boolean" isUnique="false"/>
+                <Property Name="SolutionProvided" Type="Edm.Boolean" isUnique="false"/>
+                <Property Name="ReturntoManufacturer" Type="Edm.Boolean" isUnique="false"/>
+                <Property Name="InsuranceCovered" Type="Edm.Boolean" isUnique="false"/>
+                <Property Name="Issueby" Type="Edm.Boolean" isUnique="false"/>
+            </EntityType>
+            <EntityType HasStream="false" Name="Insurance">
+                <Key>
+                    <PropertyRef Name="InsuranceID"/>
+                </Key>
+                <Property Name="InsuranceCompany" Type="Edm.String" isUnique="false"/>
+                <Property Name="InsurancePolicy" Type="Edm.Boolean" isUnique="false"/>
+                <Property Name="BikeModel" Type="Edm.String" isUnique="false"/>
+                <Property Name="DateOfBooking" Type="Edm.Date" isUnique="false"/>
+                <Property Name="Manufacturer" Type="Edm.String" isUnique="false"/>
+                <Property Name="CustomerID" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="InsuranceID" Type="Edm.Int32" isUnique="false"/>
+            </EntityType>
+            <EntityType HasStream="false" Name="ExtendBooking">
+                <Key>
+                    <PropertyRef Name="BookingID"/>
+                </Key>
+                <Property Name="BookingID" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="DateOfBooking" Type="Edm.Date" isUnique="false"/>
+                <Property Name="FromDate" Type="Edm.Date" isUnique="false"/>
+                <Property Name="ToDate" Type="Edm.Date" isUnique="false"/>
+                <Property Name="NewToDate" Type="Edm.Date" isUnique="false"/>
+                <NavigationProperty Name="ExtendbookingPayment" Type="Model.Payment"/>
+            </EntityType>
+            <EntityType HasStream="false" Name="Booking">
+                <Key>
+                    <PropertyRef Name="BookingID"/>
+                </Key>
+                <Property Name="BookingID" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="DateOfBooking" Type="Edm.Date" isUnique="false"/>
+                <Property Name="FromDate" Type="Edm.Date" isUnique="false"/>
+                <Property Name="ToDate" Type="Edm.Date" isUnique="false"/>
+                <Property Name="BikeAvailability" Type="Edm.Boolean" isUnique="false"/>
+                <Property Name="TokenAmount" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="Amtpaidmode" Type="Edm.Boolean" isUnique="false"/>
+                <NavigationProperty Name="Bike" Type="Model.Bike"/>
+                <NavigationProperty Name="Verfication" Type="Model.Verfication"/>
+                <NavigationProperty Name="Payment" Type="Model.Payment"/>
+                <NavigationProperty Name="Assitance" Type="Model.RoadsideAssistance"/>
+                <NavigationProperty Name="Insurance" Type="Model.Insurance"/>
+            </EntityType>
+            <EntityType HasStream="false" Name="RentalCompany">
+                <Key>
+                    <PropertyRef Name="CompanyID"/>
+                </Key>
+                <Property Name="CompanyID" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="CompanyName" Type="Edm.String" isUnique="false"/>
+                <Property Name="CompanyRegistrationNo" Type="Edm.String" isUnique="false"/>
+                <NavigationProperty Name="Bikes" Type="Collection(Model.Bike)"/>
+                <NavigationProperty Name="Customers" Type="Collection(Model.Customer)"/>
+                <NavigationProperty Name="Bookings" Type="Collection(Model.Booking)"/>
+            </EntityType>
+            <EntityType HasStream="false" Name="ReturnBikeInspection">
+                <Key>
+                    <PropertyRef Name="BikeID"/>
+                </Key>
+                <Property Name="BikeID" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="Manufacturer" Type="Edm.String" isUnique="false"/>
+                <Property Name="Model" Type="Edm.String" isUnique="false"/>
+                <Property Name="YearOfRegistration" Type="Edm.Date" isUnique="false"/>
+                <Property Name="PickupFrom" Type="Edm.String" isUnique="false"/>
+                <Property Name="DateOfVerification" Type="Edm.Date" isUnique="false"/>
+                <Property Name="AnyDamage" Type="Edm.Boolean" isUnique="false"/>
+                <Property Name="CostofDamage" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="DamagePaymentReceived" Type="Edm.Boolean" isUnique="false"/>
+                <Property Name="DamageType" Type="Edm.Boolean" isUnique="false"/>
+            </EntityType>
+            <EntityType HasStream="false" Name="Customer">
+                <Key>
+                    <PropertyRef Name="CustomerID"/>
+                </Key>
+                <Property Name="CustomerID" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="CustomerName" Type="Edm.String" isUnique="false"/>
+                <Property Name="CustomerPhoneNumber" Type="Edm.Int64" isUnique="false"/>
+                <Property Name="CusrtomerAddress" Type="Edm.String" isUnique="false"/>
+                <NavigationProperty Name="Bookings" Type="Collection(Model.Booking)"/>
+                <NavigationProperty Name="Returns" Type="Collection(Model.ReturnRentedBike)"/>
+                <NavigationProperty Name="ExtendRental" Type="Collection(Model.ExtendBooking)"/>
+            </EntityType>
+            <EntityType HasStream="false" Name="Bike">
+                <Key>
+                    <PropertyRef Name="BikeID"/>
+                </Key>
+                <Property Name="BikeID" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="Manufacturer" Type="Edm.String" isUnique="false"/>
+                <Property Name="Model" Type="Edm.String" isUnique="false"/>
+                <Property Name="YearOfRegistration" Type="Edm.Date" isUnique="false"/>
+                <Property Name="Color" Type="Edm.String" isUnique="false"/>
+            </EntityType>
+            <EntityType HasStream="false" Name="ReturnRentedBike">
+                <Key>
+                    <PropertyRef Name="BookingID"/>
+                </Key>
+                <Property Name="BookingID" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="DateOfBooking" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="FromDate" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="ToDate" Type="Edm.Int32" isUnique="false"/>
+                <NavigationProperty Name="Inspection" Type="Collection(Model.ReturnBikeInspection)"/>
+            </EntityType>
+            <EntityContainer Name="Container">
+                <EntitySet Name="RoadsideAssistances" EntityType="Model.RoadsideAssistance">
+                    <NavigationPropertyBinding Path="Service" Target="ServiceCrews"/>
+                </EntitySet>
+                <EntitySet Name="Verfications" EntityType="Model.Verfication"/>
+                <EntitySet Name="Payments" EntityType="Model.Payment"/>
+                <EntitySet Name="ServiceCrews" EntityType="Model.ServiceCrew"/>
+                <EntitySet Name="Insurances" EntityType="Model.Insurance"/>
+                <EntitySet Name="ExtendBookings" EntityType="Model.ExtendBooking">
+                    <NavigationPropertyBinding Path="ExtendbookingPayment" Target="Payments"/>
+                </EntitySet>
+                <EntitySet Name="Bookings" EntityType="Model.Booking">
+                    <NavigationPropertyBinding Path="Bike" Target="Bikes"/>
+                    <NavigationPropertyBinding Path="Verfication" Target="Verfications"/>
+                    <NavigationPropertyBinding Path="Payment" Target="Payments"/>
+                    <NavigationPropertyBinding Path="Assitance" Target="RoadsideAssistances"/>
+                    <NavigationPropertyBinding Path="Insurance" Target="Insurances"/>
+                </EntitySet>
+                <EntitySet Name="RentalCompanies" EntityType="Model.RentalCompany">
+                    <NavigationPropertyBinding Path="Bikes" Target="Bikes"/>
+                    <NavigationPropertyBinding Path="Customers" Target="Customers"/>
+                    <NavigationPropertyBinding Path="Bookings" Target="Bookings"/>
+                </EntitySet>
+                <EntitySet Name="ReturnBikeInspections" EntityType="Model.ReturnBikeInspection"/>
+                <EntitySet Name="Customers" EntityType="Model.Customer">
+                    <NavigationPropertyBinding Path="Bookings" Target="Bookings"/>
+                    <NavigationPropertyBinding Path="Returns" Target="ReturnRentedBikes"/>
+                    <NavigationPropertyBinding Path="ExtendRental" Target="ExtendBookings"/>
+                </EntitySet>
+                <EntitySet Name="Bikes" EntityType="Model.Bike"/>
+                <EntitySet Name="ReturnRentedBikes" EntityType="Model.ReturnRentedBike">
+                    <NavigationPropertyBinding Path="Inspection" Target="ReturnBikeInspections"/>
+                </EntitySet>
+            </EntityContainer>
+            <EnumType Name="IDTypes">
+                <Member Name="Adhar" Value="0"/>
+                <Member Name="Passport" Value="1"/>
+                <Member Name="Pancard" Value="2"/>
+            </EnumType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
